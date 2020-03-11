@@ -1,0 +1,15 @@
+{extend name='public/base'}
+
+{block name='nav'}
+<ol>
+    <li>首页</li>
+    <li>分类</li>
+    <li>关于</li>
+</ol>
+{/block}
+
+{block name='include'}{include file='public/header'}{/block}
+
+{block name='footer'}
+    本站采用： {__block__} | 翻版必究
+{/block}

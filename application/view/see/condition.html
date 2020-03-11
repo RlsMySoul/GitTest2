@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件判断标签</title>
+</head>
+<body>
+
+{switch $number}
+    {case 1}1{/case}
+    {case 5}5{/case}
+    {case 10|20|30}10,20,30均可{/case}
+    {default/}没有
+{/switch}
+
+<br>
+
+{if $number > 10}
+    大于10
+{/if}
+
+{if ($number > 10) OR ($number > 5)}
+    大于10
+{/if}
+
+{if $number > 10}
+    大于10
+{else/}
+    小于10
+{/if}
+
+{if $number > 100}
+    大于100
+{elseif $number > 50}
+    大于50
+{else/}
+    小于50
+{/if}
+
+{if strtoupper($user->username) == 'MR.LEE'}
+    是李先生
+{/if}
+
+<br>
+
+{in name='$number' value='10,20,30,40,50'}
+    是数组中的某一个元素
+{/in}
+
+{between name='$number' value='10,20'}
+    是在这个区间范围中
+{/between}
+
+<br>
+
+{present name='$user'}
+    这个变量声明了
+{/present}
+
+{present name='$email'}
+    这个变量声明了
+{/present}
+
+{empty name='$email'}
+    这个变量是空的
+{/empty}
+
+{define name='PI' value='3.14'}
+{defined name='PI'}PI存在{/defined}
+
+</body>
+</html>

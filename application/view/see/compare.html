@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>比较标签和定义标签</title>
+</head>
+<body>
+
+{eq name='$username' value='Mr.Lee'}
+    是李先生
+{/eq}
+
+{neq name='$username' value='Mr.Wang'}
+    不相等
+{/neq}
+
+{eq name='$username' value='Mr.Lee'}
+    相等
+{else/}
+    不相等
+{/eq}
+
+{egt name='$number' value='10'}
+    大于等于10
+{else/}
+    小于10
+{/egt}
+
+{compare type='eq' name='$username' value='Mr.Lee'}
+    李先生
+{/compare}
+
+{assign name='var' value='123'}
+{$var}
+
+{define name='PI' value='3.1415926'}
+{$Think.const.PI}
+
+{php}
+echo '原生防止脱发';
+{/php}
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量输出</title>
+</head>
+<body>
+
+{$name|default='没有值'}.{$user.username}.{$user['email']|raw}
+
+<br>
+
+{$obj->username}.{$obj->email}
+
+<br>
+
+{$Think.get.key}.{$Think.const.PHP_VERSION}.{$Think.PHP_VERSION}.{$Think.config.url_controller_layer}
+
+<br>
+
+{$password|md5}.{$time|date='Y-m-d H:i:s'}.{$number|format='%x'}.{$name|substr=0,3}.{$password|md5|upper|substr=0,3}
+
+<br>
+
+{:substr(strtoupper(md5($password)),0,3)}.{$number + $number}.{$name ? '正确' : '错误'}.{$name ?= '真'}
+
+<br>
+
+{$Think.get.name ?? '不存在'}.{$name ?: '不存在'}
+
+</body>
+</html>
